@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>-->
+    <script src="./web3.js"></script>
+    <!-- <script src="./burgerswapjssdk.js"></script> -->
+    <script src="../dist/burgerswapjssdk.js"></script>
+    <script type="text/javascript">
+        // (function() {
+        //     setTimeout(() => {
+        //         window.burgerswapjssdk.chainWeb3.connect("m");
+        //     },5000)
+            
+        //     console.log("burgerswapjssdk", window.burgerswapjssdk);
+        //     console.log("Web3", window.Web3);
+        //     console.log("12121", window);
+        // })(this);
+
+
+        (function() {		
+        //console.log("web3:"+web3);
+        
+            setTimeout(() => {
+                window.burgerswapjssdk.chainWeb3.connect("m");
+                // console.log("myAddress====="+window.burgerswapjssdk.chainWeb3.getSelectedAddress());
+                var ERC20Token=new window.burgerswapjssdk.ERC20Token(window.burgerswapjssdk.chainWeb3,'0xF2ED382e6A3439Be124813842200cf6702fD6ecA');
+                console.log(ERC20Token);
+                var balance = ERC20Token.balanceOf(window.burgerswapjssdk.chainWeb3.getSelectedAddress());
+                console.log(balance); // instanceof BigNumber
+    //				console.log(balance.toString(10)); // '1000000000000'
+                //console.log(balance.toNumber()); // 1000000000000
+
+                //console.log("myToken====="+token);
+            },5000)
+            //window.burgerswapjssdk.chainWeb3.connect("m");
+            console.log("burgerswapjssdk", window.burgerswapjssdk);
+            console.log("chainWeb3", window.burgerswapjssdk.chainWeb3);
+            console.log("Web3", window.Web3);
+            console.log("12121", window);
+
+        })(this);
+    </script>
+</head>
+<body>
+</body>
+</html>

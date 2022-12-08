@@ -1,0 +1,625 @@
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "_oldOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "_newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnerChanged",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "baseToken",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "changeOwner",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "chef",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "demaxFactory",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getChainId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getChefInfo",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "rewardToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mintPerBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalAllocPoint",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardTotal",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardTotalValue",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardTokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "rewardTokenSymbol",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DemaxShackChefQuery.ChefInfo",
+        "name": "data",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_factory",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_tokenIn",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "getCurrentRate",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_token",
+        "type": "address"
+      }
+    ],
+    "name": "getEarnInfo",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "total",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "totalValue",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_factory",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_token0",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_token1",
+        "type": "address"
+      }
+    ],
+    "name": "getPair",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_pid",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      }
+    ],
+    "name": "getPoolInfo",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "pid",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "depositToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "earnInToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "earnToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "weight",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "depositCap",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "accShare",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "earnApr",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenType",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userAllowance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userBalance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userReward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userEarn",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "pendingReward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "pendingEarn",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalStake",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "pendingRewardValue",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "pendingEarnValue",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalStakeValue",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "depositTokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "earnTokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "depositTokenSymbol",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "earnTokenSymbol",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DemaxShackChefQuery.Data",
+        "name": "data",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_token",
+        "type": "address"
+      }
+    ],
+    "name": "getTokenDecimals",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_token",
+        "type": "address"
+      }
+    ],
+    "name": "getTokenSymbol",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_chef",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_baseToken",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_swapFactory",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_demaxFactory",
+        "type": "address"
+      }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_start",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_end",
+        "type": "uint256"
+      }
+    ],
+    "name": "iteratePoolInfoList",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "pid",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "depositToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "earnInToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "earnToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "weight",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "depositCap",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "accShare",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "earnApr",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenType",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userAllowance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userBalance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userReward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userEarn",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "pendingReward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "pendingEarn",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalStake",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "pendingRewardValue",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "pendingEarnValue",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalStakeValue",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "depositTokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "earnTokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "depositTokenSymbol",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "earnTokenSymbol",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DemaxShackChefQuery.Data[]",
+        "name": "result",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "swapFactory",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "weth",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

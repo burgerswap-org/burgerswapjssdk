@@ -1,0 +1,1262 @@
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "addRouterToken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "tokens",
+        "type": "address[]"
+      }
+    ],
+    "name": "addRouterTokens",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "admin",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "baseToken",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "_factory",
+        "type": "address[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "_order",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "batchSetFactoryOrder",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "_factory",
+        "type": "address[]"
+      },
+      {
+        "internalType": "address[]",
+        "name": "_pool",
+        "type": "address[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "_order",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "batchSetPoolOrder",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "_tokens",
+        "type": "address[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "_values",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "batchSetToken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "chainSymbol",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      }
+    ],
+    "name": "changeOwner",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "config",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "countRouterToken",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "demaxFactory",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "dev",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "factoryOrder",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_tokenIn",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "getCurrentRate",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_factory",
+        "type": "address"
+      }
+    ],
+    "name": "getFactoryData",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "factory",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "mintToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mintRate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mintTotal",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalWeight",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountPerWeight",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "finishBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "disabled",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "order",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mintTokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "mintTokenSymbol",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "intro",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DemaxProjectQuery.FactoryData",
+        "name": "data",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_index",
+        "type": "uint256"
+      }
+    ],
+    "name": "getFactoryDataByIndex",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "factory",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "mintToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mintRate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mintTotal",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalWeight",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountPerWeight",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "finishBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "disabled",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "order",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mintTokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "mintTokenSymbol",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "intro",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DemaxProjectQuery.FactoryData",
+        "name": "data",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getFactoryList",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "factory",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "mintToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mintRate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mintTotal",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalWeight",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountPerWeight",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "finishBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "disabled",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "order",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mintTokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "mintTokenSymbol",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "intro",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DemaxProjectQuery.FactoryData[]",
+        "name": "list",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_tokenA",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_tokenB",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "getLpBaseTokenValue",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_tokenA",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_tokenB",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "getLpValueByFactory",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_factory",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_token0",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_token1",
+        "type": "address"
+      }
+    ],
+    "name": "getPair",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_pool",
+        "type": "address"
+      }
+    ],
+    "name": "getPoolData",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "pool",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "factory",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "lpToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "burgerToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "mintToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalStake",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalStakeValue",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mintTokenBalance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userBurger",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userReward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userBalance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userAllowance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "lpToken0",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "lpToken1",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "burgerTokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mintTokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "weight",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "disabled",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "order",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "burgerTokenSymbol",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "mintTokenSymbol",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "lpToken0Symbol",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "lpToken1Symbol",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DemaxProjectQuery.PoolData",
+        "name": "data",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_factory",
+        "type": "address"
+      }
+    ],
+    "name": "getPoolList",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "pool",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "factory",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "lpToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "burgerToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "mintToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalStake",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalStakeValue",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mintTokenBalance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userBurger",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userReward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userBalance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "userAllowance",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "lpToken0",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "lpToken1",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "burgerTokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mintTokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "weight",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "disabled",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "order",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "burgerTokenSymbol",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "mintTokenSymbol",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "lpToken0Symbol",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "lpToken1Symbol",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DemaxProjectQuery.PoolData[]",
+        "name": "list",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_pair",
+        "type": "address"
+      }
+    ],
+    "name": "getSwapPairReserve",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "token0",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "token1",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "decimals0",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "decimals1",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "reserve0",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "reserve1",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "totalSupply",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "indexRouterToken",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_projectDeploy",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_baseToken",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_demaxFactory",
+        "type": "address"
+      }
+    ],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "isRouterToken",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_start",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_end",
+        "type": "uint256"
+      }
+    ],
+    "name": "iterateReverseFactoryList",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "address",
+            "name": "factory",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "mintToken",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mintRate",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mintTotal",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalWeight",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amountPerWeight",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "finishBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "disabled",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "order",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "mintTokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "mintTokenSymbol",
+            "type": "string"
+          },
+          {
+            "internalType": "string",
+            "name": "intro",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DemaxProjectQuery.FactoryData[]",
+        "name": "list",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "poolOrder",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "projectDeploy",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "removeRouterToken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "tokens",
+        "type": "address[]"
+      }
+    ],
+    "name": "removeRouterTokens",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "routerTokens",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_factory",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_order",
+        "type": "uint256"
+      }
+    ],
+    "name": "setFactoryOrder",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_factory",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_pool",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_order",
+        "type": "uint256"
+      }
+    ],
+    "name": "setPoolOrder",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_token",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_value",
+        "type": "uint256"
+      }
+    ],
+    "name": "setToken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_config",
+        "type": "address"
+      }
+    ],
+    "name": "setupConfig",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "tokenType",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

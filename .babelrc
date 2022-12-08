@@ -1,0 +1,15 @@
+{
+  // "presets": [
+  //   ["latest", {
+  //     "es2015": {
+  //       "modules": false
+  //     }
+  //   }]
+  // ],
+  // "plugins": ["external-helpers"]
+  // "plugins": [
+  //   ["@babel/plugin-transform-runtime", {
+  //     "regenerator": true
+  //   }, "external-helpers"]
+  // ]
+}

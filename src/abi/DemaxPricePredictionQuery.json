@@ -1,0 +1,884 @@
+[
+  {
+    "inputs": [],
+    "name": "chainSymbol",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_prediction",
+        "type": "address"
+      }
+    ],
+    "name": "getCurrentRound",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "epoch",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "lockBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bufferBlocks",
+            "type": "uint256"
+          },
+          {
+            "internalType": "int256",
+            "name": "lockPrice",
+            "type": "int256"
+          },
+          {
+            "internalType": "int256",
+            "name": "closePrice",
+            "type": "int256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bullAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bearAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardBaseCalAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "oracleCalled",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint8",
+            "name": "oracleDecimals",
+            "type": "uint8"
+          },
+          {
+            "internalType": "address",
+            "name": "tokenAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "tokenSymbol",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DemaxPricePredictionQuery.Round",
+        "name": "data",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_prediction",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_epoch",
+        "type": "uint256"
+      }
+    ],
+    "name": "getRound",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "epoch",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "lockBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bufferBlocks",
+            "type": "uint256"
+          },
+          {
+            "internalType": "int256",
+            "name": "lockPrice",
+            "type": "int256"
+          },
+          {
+            "internalType": "int256",
+            "name": "closePrice",
+            "type": "int256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bullAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bearAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardBaseCalAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "oracleCalled",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint8",
+            "name": "oracleDecimals",
+            "type": "uint8"
+          },
+          {
+            "internalType": "address",
+            "name": "tokenAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "tokenSymbol",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DemaxPricePredictionQuery.Round",
+        "name": "data",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_prediction",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "_epochs",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "getRounds",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "epoch",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "lockBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bufferBlocks",
+            "type": "uint256"
+          },
+          {
+            "internalType": "int256",
+            "name": "lockPrice",
+            "type": "int256"
+          },
+          {
+            "internalType": "int256",
+            "name": "closePrice",
+            "type": "int256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bullAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bearAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardBaseCalAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "oracleCalled",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint8",
+            "name": "oracleDecimals",
+            "type": "uint8"
+          },
+          {
+            "internalType": "address",
+            "name": "tokenAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "tokenSymbol",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DemaxPricePredictionQuery.Round[]",
+        "name": "data",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_prediction",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_epoch",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      }
+    ],
+    "name": "getUserRound",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "epoch",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "lockBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "int256",
+            "name": "lockPrice",
+            "type": "int256"
+          },
+          {
+            "internalType": "int256",
+            "name": "closePrice",
+            "type": "int256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bullAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bearAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardBaseCalAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "oracleCalled",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint8",
+            "name": "oracleDecimals",
+            "type": "uint8"
+          },
+          {
+            "internalType": "address",
+            "name": "tokenAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "position",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "claimed",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "tokenSymbol",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DemaxPricePredictionQuery.UserRound",
+        "name": "data",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_prediction",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "_epochs",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "getUserRounds",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "epoch",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "lockBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "int256",
+            "name": "lockPrice",
+            "type": "int256"
+          },
+          {
+            "internalType": "int256",
+            "name": "closePrice",
+            "type": "int256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bullAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bearAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardBaseCalAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "oracleCalled",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint8",
+            "name": "oracleDecimals",
+            "type": "uint8"
+          },
+          {
+            "internalType": "address",
+            "name": "tokenAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "position",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "claimed",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "tokenSymbol",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DemaxPricePredictionQuery.UserRound[]",
+        "name": "data",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_prediction",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_cursor",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_size",
+        "type": "uint256"
+      }
+    ],
+    "name": "iterateRevestUserRounds",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "cursor",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "total",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "epoch",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "lockBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "int256",
+            "name": "lockPrice",
+            "type": "int256"
+          },
+          {
+            "internalType": "int256",
+            "name": "closePrice",
+            "type": "int256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bullAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bearAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardBaseCalAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "oracleCalled",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint8",
+            "name": "oracleDecimals",
+            "type": "uint8"
+          },
+          {
+            "internalType": "address",
+            "name": "tokenAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "position",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "claimed",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "tokenSymbol",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DemaxPricePredictionQuery.UserRound[]",
+        "name": "data",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_prediction",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_cursor",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_size",
+        "type": "uint256"
+      }
+    ],
+    "name": "iterateUserRounds",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "cursor",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "total",
+        "type": "uint256"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "epoch",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "lockBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endBlock",
+            "type": "uint256"
+          },
+          {
+            "internalType": "int256",
+            "name": "lockPrice",
+            "type": "int256"
+          },
+          {
+            "internalType": "int256",
+            "name": "closePrice",
+            "type": "int256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "totalAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bullAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bearAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardBaseCalAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "oracleCalled",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint8",
+            "name": "oracleDecimals",
+            "type": "uint8"
+          },
+          {
+            "internalType": "address",
+            "name": "tokenAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "tokenDecimals",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "position",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "claimed",
+            "type": "uint256"
+          },
+          {
+            "internalType": "string",
+            "name": "tokenSymbol",
+            "type": "string"
+          }
+        ],
+        "internalType": "struct DemaxPricePredictionQuery.UserRound[]",
+        "name": "data",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
