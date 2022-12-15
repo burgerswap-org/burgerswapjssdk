@@ -18,7 +18,7 @@ export default class ChristmasPunchIn extends Base {
         return await this.provider.executeContract(this.contract, "punchIn", 0, [])
     }
 
-    async claim(to, signature) {
-        return await this.provider.executeContract(this.contract, "claim", 0, [to, signature])
+    async claim(to, signature, txId) {
+        return await this.provider.executeContract(this.contract, "claim", 0, [to, signature, txId])
     }
 }

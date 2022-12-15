@@ -85,7 +85,7 @@ const ContractsAddr = {
     BurgerCommodityMarket: "0xE07A2cEE008bBA08D2B08d402026F2998704D5a3",
     DailyPunchIn: "0x7E991060244734EdC0acCEB57d676a7C25725bd1",
     ActivityPunchIn: "0xD4ce4cf2c4264479862200a254643a4141917904",
-    ChristmasPunchIn: "0xE68A98A1CC21E6B7eC30A4ad7100Aadb1143cB4b"
+    ChristmasPunchIn: "0xcB91F4C74193D96a3618809603E739C77f753b5D"
   },
 };
 
