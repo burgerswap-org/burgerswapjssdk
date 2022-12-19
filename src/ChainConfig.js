@@ -48,7 +48,8 @@ const ContractsAddr = {
     DemaxSwapReward: '0x87E2b671bAf5779DE8b9a2c801e848599b832FFc',
     DemaxAggregatorV2: '0xe08Ab553720a46C071475838a6cC8D98D1Afb891',
     DemaxAggregatorRouterV2: '0xD51B1Ce2507CcF258f33F7E7CCdBef0bDFA1c531',
-    PunchIn: ""
+    DailyPunchIn: "0x7521e13F7365236CEc7FdC99e7C4DB8FbADEEA0B",
+    ChristmasPunchIn: "0x6FFB703653FeC0d340406e8acC69a2e01d2D09B4"
   },
   97: {
     ThirdBurgerUsdPair: '0x46A9A54912Bb69e2ECDC3B07B5B9841E24b2f1e1',
