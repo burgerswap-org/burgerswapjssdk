@@ -1,7 +1,10 @@
-import { ParticleNetwork, WalletEntryPosition } from "@particle-network/auth";
-import { ParticleProvider } from "@particle-network/provider";
+// import { ParticleNetwork, WalletEntryPosition } from "@particle-network/auth";
+// import { ParticleProvider } from "@particle-network/provider";
 
-const pn = new ParticleNetwork({
+const auth = require("@particle-network/auth")
+const provider = require("@particle-network/provider")
+
+const pn = new auth.ParticleNetwork({
     projectId: "642051a9-9a72-4386-8561-0bc24fdc4478",
     clientKey: "crFGCOsLvF09N2BaaGufCVe7Lxb3YUwmHsXGx7mI",
     appId: "d9d43649-4d3e-4800-89a9-e5b28d77b8ff",
@@ -15,7 +18,7 @@ const pn = new ParticleNetwork({
     // }
   });
   
-const particleProvider = new ParticleProvider(pn.auth);
+const particleProvider = new provider.ParticleProvider(pn.auth);
   //if you need support solana chain
 //   const solanaWallet = new SolanaWallet(pn.auth);
   
