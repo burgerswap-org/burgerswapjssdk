@@ -1,6 +1,7 @@
 import QRCodeModal from '@walletconnect/qrcode-modal';
 import Web3Util from './Web3Util.js'
 import web3M from './web3modal.js';
+import ParticleNetwork from "./particleWallet";
 
 import {
     CHAIN_RPC,
@@ -272,7 +273,16 @@ class ChainWeb3 {
         }
     }
 
-    chainConnected(type) {
+    async connectParticle() {
+        const info = await ParticleNetwork.pn.auth.login();
+        console.log("pn.auth info", info);
+        window.localStorage.setItem("connectChainType", "particle");
+        this.ethereum = ParticleNetwork.particleProvider;
+        this.chainConnected("particle", info.wallets[0].public_address);
+        return true;
+    }
+
+    chainConnected(type, address) {
         this.chainInstalled = true
         this.web3 = new Web3(this.ethereum)
         this.web3Util.init(this.web3)
@@ -287,6 +297,8 @@ class ChainWeb3 {
                 if (type === 'u') this.handleNewAccounts([this.ethereum.selectedAddress]);
             } else {
                 this.web3.eth.getChainId().then((chainId) => {
+                    type === "particle" &&
+                            this.handleNewAccounts([address]);
                     chainWeb3.handleNewChain(chainId)
                 }).catch(e => {
                     console.error('web3 chainid except:', e)
@@ -339,6 +351,8 @@ class ChainWeb3 {
 			this.connectUnstoppable();
 		} else if (to === 'okx') {
 			this.connectOKX();
+		} else if (to === 'particle') {
+			this.connectParticle();
 		}
     }
 
@@ -395,7 +409,13 @@ class ChainWeb3 {
 				console.log('No Provider!');
 				return Promise.reject('No Provider!');
 			}
-		}
+		} else if (to === "particle") {
+            this.connectParticle();
+            if (!this.chainInstalled) {
+                console.log("No Provider!");
+                return Promise.reject("No Provider!");
+            }
+        }
 
         if (this.chainInstalled) {
             console.log('connect...')
