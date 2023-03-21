@@ -3,7 +3,7 @@ const CHAIN_RPC = {
   42: 'https://kovan.infura.io/v3/0e47785118b2494092b1a9a9b576c2bd',
   56: 'https://bsc-dataseed.binance.org',
   97: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
-  421611: 'https://rinkeby.arbitrum.io/rpc',
+  421613: 'https://arbitrum-goerli.public.blastapi.io',
   42161: 'https://arb1.arbitrum.io/rpc',
 };
 
@@ -12,7 +12,7 @@ const CHAIN_BROWSER = {
   42: 'https://kovan.etherscan.io',
   56: 'https://bscscan.com',
   97: 'https://testnet.bscscan.com',
-  421611: 'https://rinkeby-explorer.arbitrum.io',
+  421613: 'https://goerli-rollup-explorer.arbitrum.io',
   42161: 'https://arbiscan.io',
 };
 
@@ -21,7 +21,7 @@ const CHAIN_NAME = {
   42: 'Ethereum Chain Kovan',
   56: 'Binance Smart Chain Mainnet',
   97: 'Binance Smart Chain Testnet',
-  421611: 'Arbitrum Chain Testnet',
+  421613: 'Arbitrum Chain Testnet',
   42161: 'Arbitrum Chain Mainnet',
 };
 
@@ -103,7 +103,7 @@ const ChainSymbol = {
     42: 'WETH',
     56: 'WBNB',
     97: 'WBNB',
-    421611: 'WETH',
+    421613: 'WETH',
     42161: 'WETH',
   },
   ZeroToken: {
@@ -111,7 +111,7 @@ const ChainSymbol = {
     42: 'ETH-T',
     56: 'BNB',
     97: 'BNB-T',
-    421611: 'ETH',
+    421613: 'ETH',
     42161: 'ETH',
   },
 };
