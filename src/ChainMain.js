@@ -18,6 +18,7 @@ import NFTFixedswap from './module/nft/NFTFixedswap.js';
 import DailyPunchIn from "./module/punch-in/DailyPunchIn.js";
 import ActivityPunchIn from "./module/punch-in/ActivityPunchIn.js";
 import ChristmasPunchIn from "./module/punch-in/ChristmasPunchIn.js";
+import Props721 from "./module/Props721.js";
 
 export default class ChainMain {
   constructor(chainWeb3) {
@@ -43,5 +44,6 @@ export default class ChainMain {
     this.dailyPunchIn = new DailyPunchIn(chainWeb3);
     this.activityPunchIn = new ActivityPunchIn(chainWeb3);
     this.christmasPunchIn = new ChristmasPunchIn(chainWeb3);
+    this.props721 = new Props721(chainWeb3);
   }
 }
