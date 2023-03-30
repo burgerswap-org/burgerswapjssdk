@@ -7,7 +7,7 @@ async function main() {
     let executeInfo = false;
     let executeOwnerOf = false;
     let executeTokenURI = false;
-    let executeSetSiger = false;
+    let executeSetSiger = true;
     let executeMint = false;
     let executeBurn = false;
 
@@ -37,12 +37,14 @@ async function main() {
     if (executeMint) {
         console.log("============split line============")
         let expiryTime = new BigNumber(Math.floor(Date.now() / 1000)).plus(86400)
-        let seed = new BigNumber(111)
+        let orderId = new BigNumber(111)
+        let propId = new BigNumber(222)
         let consumeAmount = new BigNumber(1).shiftedBy(18)
         let message = chainApi.chainWeb3.web3.utils.soliditySha3(
             { t: "address", v: chainApi.chainWeb3.account },
             { t: "uint256", v: expiryTime },
-            { t: "uint256", v: seed },
+            { t: "uint256", v: orderId },
+            { t: "uint256", v: propId },
             { t: "uint256", v: consumeAmount },
             { t: "address", v: chainApi.props721.address }
         );
@@ -50,7 +52,7 @@ async function main() {
             message,
             chainApi.chainWeb3.config.WalletPrivateKeys[0]
         );
-        let mintRes = await chainApi.props721.mint(expiryTime, seed, consumeAmount, mintSig.signature)
+        let mintRes = await chainApi.props721.mint(expiryTime, orderId, propId, consumeAmount, mintSig.signature)
         console.log('txhash:', mintRes.transactionHash)
     }
 

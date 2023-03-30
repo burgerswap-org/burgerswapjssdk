@@ -40,8 +40,14 @@ export default class Props721 extends Base {
         return res = await this.contract.methods.getApproved(tokenId).call()
     }
 
-    async mint(expiryTime, seed, consumeAmount, signature) {
-        return await this.provider.executeContract(this.contract, 'mint', 0, [expiryTime, seed, consumeAmount, signature])
+    async mint(
+        expiryTime,
+        orderId,
+        propId,
+        consumeAmount,
+        signature
+    ) {
+        return await this.provider.executeContract(this.contract, 'mint', 0, [expiryTime, orderId, propId, consumeAmount, signature])
     }
 
     async burn(tokenId, consumeAmount, signature) {
