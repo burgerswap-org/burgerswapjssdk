@@ -73,6 +73,8 @@
   "module": "dist/sdk.esm.js",
   "dependencies": {
     "@babel/core": "^7.15.8",
+    "@particle-network/auth": "^0.11.5",
+    "@particle-network/provider": "^0.11.5",
     "@uauth/js": "^2.0.0",
     "@uauth/web3modal": "^2.0.0",
     "moralis": "^2.8.1",
