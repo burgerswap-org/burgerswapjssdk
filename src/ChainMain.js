@@ -9,7 +9,7 @@ import DemaxDelegate from './module/demax/DemaxDelegate.js';
 import DemaxQuery2 from './module/demax/DemaxQuery2.js';
 import DemaxShackChef from './module/demax/DemaxShackChef.js';
 import DemaxShackChefQuery from './module/demax/DemaxShackChefQuery.js';
-import DemaxLp from './module/demax/DemaxLp.js';
+import DemaxLp from "./module/demax/DemaxLP.js";
 import DemaxFactory from './module/demax/DemaxFactory.js';
 import SwitchQuery from "./module/demax/SwitchQuery.js";
 import BurgerCommodityMarket from './module/demax/BurgerCommodityMarket.js';
@@ -19,6 +19,8 @@ import DailyPunchIn from "./module/punch-in/DailyPunchIn.js";
 import ActivityPunchIn from "./module/punch-in/ActivityPunchIn.js";
 import ChristmasPunchIn from "./module/punch-in/ChristmasPunchIn.js";
 import Props721 from "./module/Props721.js";
+import RewardAgent from "./module/raffle/RewardAgent.js"
+import RaffleTicket from "./module/raffle/RaffleTicket.js"
 
 export default class ChainMain {
   constructor(chainWeb3) {
@@ -45,5 +47,7 @@ export default class ChainMain {
     this.activityPunchIn = new ActivityPunchIn(chainWeb3);
     this.christmasPunchIn = new ChristmasPunchIn(chainWeb3);
     this.props721 = new Props721(chainWeb3);
+    this.rewardAgent = new RewardAgent(chainWeb3);
+    this.raffleTicket = new RaffleTicket(chainWeb3);
   }
 }
