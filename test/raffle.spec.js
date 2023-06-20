@@ -4,11 +4,10 @@ import BigNumber from 'bignumber.js';
 async function main() {
     chainApi.chainWeb3.connect();
 
-    let executeInfo = true;
-    let executeSetSiger = false;
-    let executeClaim = true;
-    let executeExchange = true;
-    let executeClaimERC20 = true;
+    let executeInfo = false;
+    let executeClaim = false;
+    let executeExchange = false;
+    let executeClaimERC20 = false;
 
     // consoume token approve
     let consumeTokenAddr = "0x06bF890dfF5b422c35c9683f47d2d7663f6E1c24" // bsc-test Burger
@@ -27,20 +26,12 @@ async function main() {
         console.log("res:", info)
     }
 
-    // setSigner
-    if (executeSetSiger) {
-        console.log("============split line============")
-        let setSignerRes = await chainApi.raffleTicket.setSinger(chainApi.chainWeb3.account)
-        console.log("raffle ticket txhash:", setSignerRes.transactionHash)
-        setSignerRes = await chainApi.rewardAgent.setSinger(chainApi.chainWeb3.account)
-        console.log("reward agent txhash:", setSignerRes.transactionHash)
-    }
-
     // claim raffleTicket
     if (executeClaim) {
         console.log("============split line============")
         let amount = new BigNumber(10)
         let orderId = new BigNumber(111)
+        let txId = new BigNumber(111)
         let message = chainApi.chainWeb3.web3.utils.soliditySha3(
             { t: "address", v: chainApi.chainWeb3.account },
             { t: "uint256", v: amount },
@@ -51,7 +42,7 @@ async function main() {
             message,
             chainApi.chainWeb3.config.WalletPrivateKeys[0]
         );
-        let claimRes = await chainApi.raffleTicket.claim(amount, orderId, claimSig.signature)
+        let claimRes = await chainApi.raffleTicket.claim(amount, orderId, txId, claimSig.signature)
         console.log('txhash:', claimRes.transactionHash)
         let balance = await chainApi.raffleTicket.balanceOf(chainApi.chainWeb3.account)
         console.log("balance:", balance.toString())
@@ -73,6 +64,7 @@ async function main() {
         console.log("============split line============")
         let to = "0x146dCB8a374f642c13d51412D15CF78Ce598d23F"
         let orderId = new BigNumber(1)
+        let txId = new BigNumber(1)
         let amount = new BigNumber(10).shiftedBy(18)
         let message = chainApi.chainWeb3.web3.utils.soliditySha3(
             { t: "address", v: to },
@@ -85,7 +77,7 @@ async function main() {
             message,
             chainApi.chainWeb3.config.WalletPrivateKeys[0]
         );
-        let claimERC20Res = await chainApi.rewardAgent.claimERC20(to, consumeTokenAddr, amount, orderId, claimERC20Sig.signature)
+        let claimERC20Res = await chainApi.rewardAgent.claimERC20(to, consumeTokenAddr, amount, orderId, txId, claimERC20Sig.signature)
         console.log('txhash:', claimERC20Res.transactionHash)
         let balance = await consumeToken.balanceOf(to)
         console.log('balance:', balance.toString())

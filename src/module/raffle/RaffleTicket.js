@@ -33,8 +33,8 @@ export default class RaffleTicket extends Base {
     return await token.transfer(to, amount);
   }
 
-  async claim(amount, orderId, signature) {
-    return await this.provider.executeContract(this.contract, 'claim', 0, [amount, orderId, signature]);
+  async claim(amount, orderId, txId, signature) {
+    return await this.provider.executeContract(this.contract, 'claim', 0, [amount, orderId, txId, signature]);
   }
 
   async exchange(amount) {

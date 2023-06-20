@@ -7,10 +7,10 @@ export default class RewardAgent extends Base {
     }
  
     // function claimERC20(address,address,uint256,uint64,bytes memory)
-    async claimERC20(to, token, amount, orderId, signature) {
+    async claimERC20(to, token, amount, orderId, txId, signature) {
         if (!to) {
             to = this.provider.account;
         }
-        return await this.provider.executeContract(this.contract, "claimERC20", 0, [to, token, amount, orderId, signature])
+        return await this.provider.executeContract(this.contract, "claimERC20", 0, [to, token, amount, orderId, txId, signature])
     }
 } 
