@@ -20,7 +20,7 @@ import ActivityPunchIn from "./module/punch-in/ActivityPunchIn.js";
 import ChristmasPunchIn from "./module/punch-in/ChristmasPunchIn.js";
 import Props721 from "./module/Props721.js";
 import RewardAgent from "./module/raffle/RewardAgent.js"
-import RaffleTicket from "./module/raffle/RaffleTicket.js"
+import BurgerDiamond from "./module/raffle/BurgerDiamond.js"
 
 export default class ChainMain {
   constructor(chainWeb3) {
@@ -48,6 +48,6 @@ export default class ChainMain {
     this.christmasPunchIn = new ChristmasPunchIn(chainWeb3);
     this.props721 = new Props721(chainWeb3);
     this.rewardAgent = new RewardAgent(chainWeb3);
-    this.raffleTicket = new RaffleTicket(chainWeb3);
+    this.burgerDiamond = new BurgerDiamond(chainWeb3);
   }
 }

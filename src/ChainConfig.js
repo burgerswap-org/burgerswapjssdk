@@ -96,7 +96,7 @@ const ContractsAddr = {
     ChristmasPunchIn: "0xcB91F4C74193D96a3618809603E739C77f753b5D",
     Props721: '0xa728ae79bAe825385B19d5ef444be96a98aEB840',
     RewardAgent: "0x3417aB7224382D42a470Ef1Cf551239eF4e5b375",
-    RaffleTicket: "0xf18a1B0793C11412980eAd3219e6E6e075e39506"
+    BurgerDiamond: "0xB264Af1B2A2Ce01c51881548f21E6eCa424Deb3B"
   },
 };
 

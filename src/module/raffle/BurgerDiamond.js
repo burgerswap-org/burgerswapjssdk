@@ -1,12 +1,12 @@
-import RaffleTicketABI from '../../abi/RaffleTicket.json';
+import ABI from '../../abi/BurgerDiamond.json';
 import Base from '../Base.js';
 import ERC20Token from '../ERC20Token.js';
 
-export default class RaffleTicket extends Base {
+export default class BurgerDiamond extends Base {
   // token = null;
 
   constructor(provider) {
-    super(provider, RaffleTicketABI.abi, 'RaffleTicket');
+    super(provider, ABI.abi, 'BurgerDiamond');
   }
 
   async balanceOf(user) {
@@ -37,7 +37,7 @@ export default class RaffleTicket extends Base {
     return await this.provider.executeContract(this.contract, 'claim', 0, [amount, orderId, txId, signature]);
   }
 
-  async exchange(amount) {
-    return await this.provider.executeContract(this.contract, 'exchange', 0, [amount]);
+  async exchange(amount, orderId, txId, signature) {
+    return await this.provider.executeContract(this.contract, 'exchange', 0, [amount, orderId, txId, signature]);
   }
 }

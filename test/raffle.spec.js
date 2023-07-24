@@ -4,7 +4,7 @@ import BigNumber from 'bignumber.js';
 async function main() {
     chainApi.chainWeb3.connect();
 
-    let executeInfo = false;
+    let executeInfo = true;
     let executeClaim = false;
     let executeExchange = false;
     let executeClaimERC20 = false;
@@ -18,43 +18,59 @@ async function main() {
         await consumeToken.approve(chainApi.rewardAgent.address)
     }
 
-    /// =====================RaffleTicket=====================
+    /// =====================BurgerDiamond===================
     // info
     if (executeInfo) {
         console.log("============split line============")
-        let info = await chainApi.raffleTicket.info()
+        let info = await chainApi.burgerDiamond.info()
         console.log("res:", info)
     }
 
-    // claim raffleTicket
+    // claim BurgerDiamond
     if (executeClaim) {
         console.log("============split line============")
         let amount = new BigNumber(10)
         let orderId = new BigNumber(111)
         let txId = new BigNumber(111)
+        let operation = new BigNumber(0)
         let message = chainApi.chainWeb3.web3.utils.soliditySha3(
             { t: "address", v: chainApi.chainWeb3.account },
             { t: "uint256", v: amount },
             { t: "uint256", v: orderId },
-            { t: "address", v: chainApi.raffleTicket.address }
+            { t: "uint8", v: operation },
+            { t: "address", v: chainApi.burgerDiamond.address }
         );
         let claimSig = chainApi.chainWeb3.web3.eth.accounts.sign(
             message,
             chainApi.chainWeb3.config.WalletPrivateKeys[0]
         );
-        let claimRes = await chainApi.raffleTicket.claim(amount, orderId, txId, claimSig.signature)
+        let claimRes = await chainApi.burgerDiamond.claim(amount, orderId, txId, claimSig.signature)
         console.log('txhash:', claimRes.transactionHash)
-        let balance = await chainApi.raffleTicket.balanceOf(chainApi.chainWeb3.account)
+        let balance = await chainApi.burgerDiamond.balanceOf(chainApi.chainWeb3.account)
         console.log("balance:", balance.toString())
     }
 
-    // exchange raffleTicket
+    // exchange BurgerDiamond
     if (executeExchange) {
         console.log("============split line============")
         let amount = new BigNumber(5)
-        let exchangeRes = await chainApi.raffleTicket.exchange(amount)
+        let orderId = new BigNumber(111)
+        let txId = new BigNumber(111)
+        let operation = new BigNumber(1)
+        let message = chainApi.chainWeb3.web3.utils.soliditySha3(
+            { t: "address", v: chainApi.chainWeb3.account },
+            { t: "uint256", v: amount },
+            { t: "uint256", v: orderId },
+            { t: "uint8", v: operation },
+            { t: "address", v: chainApi.burgerDiamond.address }
+        );
+        let exchangeSig = chainApi.chainWeb3.web3.eth.accounts.sign(
+            message,
+            chainApi.chainWeb3.config.WalletPrivateKeys[0]
+        );
+        let exchangeRes = await chainApi.burgerDiamond.exchange(amount, orderId, txId, exchangeSig.signature)
         console.log('txhash:', exchangeRes.transactionHash)
-        let balance = await chainApi.raffleTicket.balanceOf(chainApi.chainWeb3.account)
+        let balance = await chainApi.burgerDiamond.balanceOf(chainApi.chainWeb3.account)
         console.log("balance:", balance.toString())
     }
 
