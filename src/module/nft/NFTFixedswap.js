@@ -1,4 +1,4 @@
-import NFTFixedswapABI from '../../abi/NFTFixedswap.json';
+import NFTFixedswapABI from '../../abi/NFTFixedswap.json' assert { type: 'json' };
 import Base from '../Base.js';
 
 export default class NFTFixedswap extends Base {

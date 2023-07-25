@@ -4,7 +4,7 @@ import BigNumber from 'bignumber.js';
 async function main() {
     chainApi.chainWeb3.connect();
 
-    let executeInfo = true;
+    let executeInfo = false;
     let executeClaim = false;
     let executeExchange = false;
     let executeClaimERC20 = false;

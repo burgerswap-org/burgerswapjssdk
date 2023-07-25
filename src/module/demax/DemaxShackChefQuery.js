@@ -1,4 +1,4 @@
-import DemaxShackChefQueryABI from '../../abi/DemaxShackChefQuery.json';
+import DemaxShackChefQueryABI from '../../abi/DemaxShackChefQuery.json' assert { type: 'json' };
 import Base from '../Base.js';
 
 export default class DemaxShackChefQuery extends Base {

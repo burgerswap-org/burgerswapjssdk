@@ -1,4 +1,4 @@
-import DemaxDelegateABI from '../../abi/DemaxDelegate.json';
+import DemaxDelegateABI from '../../abi/DemaxDelegate.json' assert { type: 'json' };
 import ERC20Token from '../ERC20Token.js';
 import DemaxQuery2 from './DemaxQuery2.js';
 import DemaxConfig from './DemaxConfig.js'

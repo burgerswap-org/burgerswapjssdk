@@ -1,4 +1,4 @@
-import ABI from '../../abi/BurgerDiamond.json';
+import ABI from '../../abi/BurgerDiamond.json' assert { type: 'json' };
 import Base from '../Base.js';
 import ERC20Token from '../ERC20Token.js';
 

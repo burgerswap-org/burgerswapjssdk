@@ -1,4 +1,4 @@
-import DemaxFactoryABI from '../../abi/DemaxFactory.json';
+import DemaxFactoryABI from '../../abi/DemaxFactory.json' assert { type: 'json' };
 import Base from '../Base.js';
 
 export default class DemaxFactory extends Base {

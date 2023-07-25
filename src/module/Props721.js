@@ -1,4 +1,4 @@
-import ABI from '../abi/Props721.json';
+import ABI from '../abi/Props721.json' assert { type: 'json' };
 import Base from './Base.js';
 
 export default class Props721 extends Base {

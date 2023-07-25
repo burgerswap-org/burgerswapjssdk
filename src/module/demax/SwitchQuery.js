@@ -1,4 +1,4 @@
-import SwitchQueryABI from '../../abi/SwitchQuery.json';
+import SwitchQueryABI from '../../abi/SwitchQuery.json' assert { type: 'json' };
 import BigNumber from "bignumber.js"
 import Base from '../Base.js';
 

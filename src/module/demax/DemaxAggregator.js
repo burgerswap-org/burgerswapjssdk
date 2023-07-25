@@ -1,4 +1,4 @@
-import DemaxAggregatorABI from '../../abi/BurgerAggregator.json';
+import DemaxAggregatorABI from '../../abi/BurgerAggregator.json' assert { type: 'json' };
 import ERC20Token from '../ERC20Token.js';
 import DemaxAggregatorRouter from './DemaxAggregatorRouter.js';
 import BigNumber from "bignumber.js"

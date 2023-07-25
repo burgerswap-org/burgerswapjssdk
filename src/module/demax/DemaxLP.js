@@ -1,4 +1,4 @@
-import DemaxLPABI from '../../abi/DemaxLP.json';
+import DemaxLPABI from '../../abi/DemaxLP.json' assert { type: 'json' };
 import BigNumber from 'bignumber.js';
 import BaseInstance from '../BaseInstance.js';
 

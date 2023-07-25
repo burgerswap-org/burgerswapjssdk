@@ -1,4 +1,4 @@
-import AggregatorRouterABI from '../abi/AggregatorRouter.json';
+import AggregatorRouterABI from '../abi/AggregatorRouter.json' assert { type: 'json' };
 import BigNumber from "bignumber.js"
 import Base from './Base.js';
 import {Tokens} from '../ChainConfig.js';
