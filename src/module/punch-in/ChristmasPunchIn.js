@@ -1,4 +1,4 @@
-import ABI from '../../abi/ChristmasPunchIn.json' assert { type: 'json' };
+import ABI from '../../abi/ChristmasPunchIn.json';
 import Base from '../Base.js';
 
 export default class ChristmasPunchIn extends Base {

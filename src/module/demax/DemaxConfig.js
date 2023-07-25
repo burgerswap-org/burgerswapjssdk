@@ -1,4 +1,4 @@
-import DemaxConfigABI from '../../abi/DemaxConfig.json' assert { type: 'json' };
+import DemaxConfigABI from '../../abi/DemaxConfig.json';
 import BigNumber from "bignumber.js"
 import Base from '../Base.js';
 

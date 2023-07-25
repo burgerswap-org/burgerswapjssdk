@@ -1,4 +1,4 @@
-import NFTEnglishAuctionABI from '../../abi/NFTEnglishAuction.json' assert { type: 'json' };
+import NFTEnglishAuctionABI from '../../abi/NFTEnglishAuction.json';
 import Base from '../Base.js';
 
 export default class NFTEnglishAuction extends Base {

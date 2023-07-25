@@ -1,4 +1,4 @@
-import DemaxQuery2ABI from '../../abi/DemaxQuery2.json' assert { type: 'json' };
+import DemaxQuery2ABI from '../../abi/DemaxQuery2.json';
 import Base from '../Base.js';
 import Liquidity from '../../model/liquidity.js';
 import DemaxLP from './DemaxLP.js';

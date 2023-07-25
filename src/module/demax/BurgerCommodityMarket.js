@@ -1,4 +1,4 @@
-import BurgerCommodityMarketABI from '../../abi/BurgerCommodityMarket.json' assert { type: 'json' };
+import BurgerCommodityMarketABI from '../../abi/BurgerCommodityMarket.json';
 import BigNumber from "bignumber.js";
 import ERC20Token from '../ERC20Token.js';
 import Base from '../Base.js';

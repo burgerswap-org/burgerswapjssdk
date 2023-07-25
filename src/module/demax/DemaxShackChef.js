@@ -1,4 +1,4 @@
-import DemaxShackChefABI from '../../abi/DemaxShackChef.json' assert { type: 'json' };
+import DemaxShackChefABI from '../../abi/DemaxShackChef.json';
 import Base from '../Base.js';
 import BigNumber from 'bignumber.js'
 import ERC20Token from '../ERC20Token.js';

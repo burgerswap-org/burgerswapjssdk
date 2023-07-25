@@ -1,4 +1,4 @@
-import DailyPunchInABI from '../../abi/DailyPunchIn.json' assert { type: 'json' };
+import DailyPunchInABI from '../../abi/DailyPunchIn.json';
 import Base from '../Base.js';
 
 export default class DailyPunchIn extends Base {

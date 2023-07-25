@@ -1,4 +1,4 @@
-import BurgerSwapRewardABI from '../../abi/BurgerSwapReward.json' assert { type: 'json' };
+import BurgerSwapRewardABI from '../../abi/BurgerSwapReward.json';
 import ERC20Token from '../ERC20Token.js';
 import BigNumber from "bignumber.js"
 import Base from '../Base.js';

@@ -1,6 +1,6 @@
-import BurgerAggregatorV2ABI from '../../abi/BurgerAggregatorV2.json' assert { type: 'json' };
-import DexIzumiswap400ABI from '../../abi/DexIzumiswap400.json' assert { type: 'json' };
-import DexIzumiswap2000ABI from '../../abi/DexIzumiswap2000.json' assert { type: 'json' };
+import BurgerAggregatorV2ABI from '../../abi/BurgerAggregatorV2.json';
+import DexIzumiswap400ABI from '../../abi/DexIzumiswap400.json';
+import DexIzumiswap2000ABI from '../../abi/DexIzumiswap2000.json';
 import ERC20Token from '../ERC20Token.js';
 import DemaxAggregatorRouterV2 from './DemaxAggregatorRouterV2.js';
 import BigNumber from "bignumber.js"

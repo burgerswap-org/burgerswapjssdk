@@ -1,4 +1,4 @@
-import RewardAgentABI from '../../abi/RewardAgent.json' assert { type: 'json' };
+import RewardAgentABI from '../../abi/RewardAgent.json';
 import Base from '../Base.js';
 
 export default class RewardAgent extends Base {

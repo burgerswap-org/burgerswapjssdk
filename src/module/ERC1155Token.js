@@ -1,4 +1,4 @@
-import AssetERC1155 from '../abi/AssetERC1155.json' assert { type: 'json' };
+import AssetERC1155 from '../abi/AssetERC1155.json';
 import BaseInstance from './BaseInstance.js';
 
 export default class ERC1155Token extends BaseInstance {

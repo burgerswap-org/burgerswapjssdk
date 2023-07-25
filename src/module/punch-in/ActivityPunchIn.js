@@ -1,4 +1,4 @@
-import ActivityPunchInABI from '../../abi/ActivityPunchIn.json' assert { type: 'json' };
+import ActivityPunchInABI from '../../abi/ActivityPunchIn.json';
 import Base from '../Base.js';
 
 export default class ActivityPunchIn extends Base {

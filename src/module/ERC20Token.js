@@ -1,4 +1,4 @@
-import ERC20TokenABI  from '../abi/ERC20Token.json' assert { type: 'json' };
+import ERC20TokenABI  from '../abi/ERC20Token.json';
 import BigNumber from "bignumber.js";
 import BaseInstance from './BaseInstance.js';
 
