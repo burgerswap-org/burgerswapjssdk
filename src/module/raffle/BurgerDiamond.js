@@ -37,7 +37,7 @@ export default class BurgerDiamond extends Base {
     return await this.provider.executeContract(this.contract, 'claim', 0, [amount, orderId, txId, signature]);
   }
 
-  async exchange(amount, orderId, txId, signature) {
-    return await this.provider.executeContract(this.contract, 'exchange', 0, [amount, orderId, txId, signature]);
+  async exchange(amount, contentId, txId, signature) {
+    return await this.provider.executeContract(this.contract, 'exchange', 0, [amount, contentId, txId, signature]);
   }
 }

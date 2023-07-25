@@ -37,6 +37,7 @@ async function main() {
             { t: "address", v: chainApi.chainWeb3.account },
             { t: "uint256", v: amount },
             { t: "uint256", v: orderId },
+            { t: "string", v: txId },
             { t: "uint8", v: operation },
             { t: "address", v: chainApi.burgerDiamond.address }
         );
@@ -54,13 +55,14 @@ async function main() {
     if (executeExchange) {
         console.log("============split line============")
         let amount = new BigNumber(5)
-        let orderId = new BigNumber(111)
+        let contentId = new BigNumber(111)
         let txId = new BigNumber(111)
         let operation = new BigNumber(1)
         let message = chainApi.chainWeb3.web3.utils.soliditySha3(
             { t: "address", v: chainApi.chainWeb3.account },
             { t: "uint256", v: amount },
-            { t: "uint256", v: orderId },
+            { t: "uint256", v: contentId },
+            { t: "string", v: txId },
             { t: "uint8", v: operation },
             { t: "address", v: chainApi.burgerDiamond.address }
         );
