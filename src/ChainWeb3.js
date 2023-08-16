@@ -738,37 +738,53 @@ class ChainWeb3 {
     return await this.web3.eth.sign(wmsg, this.getSelectedAddress());
   }
 
-  async ethSignTypedData(value) {
+  async ethCommonSignTypedData(str) { // str: string
     let owner = this.getSelectedAddress();
-    return new Promise((resolve, reject) => {
-      var params, method;
-      if (this.getSession('chainClient') === 'b') {
-        params = [owner, this.web3Util.keccak256(new Buffer(value[0].value))];
-        method = 'eth_sign';
-      } else {
-        params = [value, owner];
-        method = 'eth_signTypedData';
-      }
+    try{
+      const signature = await this.web3.eth.personal.sign(str, owner);
+      return signature;
+    }catch(e){
+      throw new Error(e?.reason ?? e?.message ?? "signature error")
+    }
+  }
 
-      this.web3.currentProvider.sendAsync(
-        {
-          method,
-          params,
-          owner,
-        },
-        function (err, result) {
-          if (err) {
-            console.error('err:', err);
-            reject(err);
-          } else if (result.error) {
-            console.error('result.error:', result.error);
-            reject(result.error);
-          } else {
-            console.log('result---', result);
-            resolve(result.result);
-          }
+
+  async ethSignTypedData(value) { // value: [{type: "string", name: "message", value: "1231231231"}]
+    let owner = this.getSelectedAddress();
+    return new Promise(async (resolve, reject) => {
+      var params, method;
+      if (this.getSession('chainClient') === 'particle') {
+        const signature = await this.web3.eth.personal.sign(value[0].value, owner);
+        resolve(signature);
+      } else {
+        if (this.getSession('chainClient') === 'b') {
+          params = [owner, this.web3Util.keccak256(new Buffer(value[0].value))];
+          method = 'eth_sign';
+        } else {
+          params = [value, owner];
+          method = 'eth_signTypedData';
         }
-      );
+
+        this.web3.currentProvider.sendAsync(
+          {
+            method,
+            params,
+            owner,
+          },
+          function (err, result) {
+            if (err) {
+              console.error('err:', err);
+              reject(err);
+            } else if (result.error) {
+              console.error('result.error:', result.error);
+              reject(result.error);
+            } else {
+              console.log('result---', result);
+              resolve(result.result);
+            }
+          }
+        );
+      }
     });
   }
 
