@@ -281,7 +281,8 @@ class ChainWeb3 {
     console.log('pn.auth info', info);
     window.localStorage.setItem('connectChainType', 'particle');
     this.ethereum = ParticleNetwork.particleProvider;
-    this.chainConnected('particle', info.wallets[0].public_address);
+    let wallets = info.wallets.filter(ele => ele.chain_name === 'evm_chain')
+    this.chainConnected('particle', wallets.public_address);
     return true;
   }
 
