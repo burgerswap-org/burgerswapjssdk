@@ -5,6 +5,7 @@ const CHAIN_RPC = {
   97: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
   421613: 'https://arbitrum-goerli.public.blastapi.io',
   42161: 'https://arb1.arbitrum.io/rpc',
+  81457: 'https://rpc.blast.io',
 };
 
 const CHAIN_BROWSER = {
@@ -14,6 +15,7 @@ const CHAIN_BROWSER = {
   97: 'https://testnet.bscscan.com',
   421613: 'https://goerli-rollup-explorer.arbitrum.io',
   42161: 'https://arbiscan.io',
+  81457: 'https://blastscan.io',
 };
 
 const CHAIN_NAME = {
@@ -23,6 +25,8 @@ const CHAIN_NAME = {
   97: 'Binance Smart Chain Testnet',
   421613: 'Arbitrum Chain Testnet',
   42161: 'Arbitrum Chain Mainnet',
+  81457: 'Blast Chain Mainnet',
+
 };
 
 const ContractsAddr = {

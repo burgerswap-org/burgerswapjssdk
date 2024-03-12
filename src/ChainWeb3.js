@@ -272,6 +272,25 @@ class ChainWeb3 {
     }
   }
 
+  connectBitget() {
+    const bitkeepProvider = window.bitkeep && window.bitkeep.ethereum;
+    if (!bitkeepProvider) {
+      console.log('not found bitkeep');
+      if (this.tryCount < 1) {
+        setTimeout(() => {
+          this.connectBitget();
+          this.tryCount++;
+        }, 2000);
+      } else {
+        console.log('not found bitkeep, timeout');
+        this.handleChainStatus(false);
+      }
+    } else {
+      this.ethereum = bitkeepProvider;
+      this.chainConnected();
+    }
+  }
+
   async connectParticle(
     options = {
       preferredAuthType: 'email',
@@ -281,7 +300,7 @@ class ChainWeb3 {
     console.log('pn.auth info', info);
     window.localStorage.setItem('connectChainType', 'particle');
     this.ethereum = ParticleNetwork.particleProvider;
-    let wallets = info.wallets.filter(ele => ele.chain_name === 'evm_chain')
+    let wallets = info.wallets.filter((ele) => ele.chain_name === 'evm_chain');
     this.chainConnected('particle', wallets.public_address);
     return true;
   }
@@ -294,6 +313,16 @@ class ChainWeb3 {
       this.ethereum.on('chainChanged', chainWeb3.handleNewChain);
       this.ethereum.on('accountsChanged', chainWeb3.handleNewAccounts);
     }
+
+    this.ethereum.autoRefreshOnNetworkChange = false;
+    if (
+      navigator.userAgent.indexOf('BitKeep') == -1 ||
+      this.ethereum?.isBitKeep
+    ) {
+      this.ethereum.on('chainChanged', chainWeb3.handleNewChain);
+      this.ethereum.on('accountsChanged', chainWeb3.handleNewAccounts);
+    }
+
     setTimeout(() => {
       this.handleChainStatus(true);
       if (this.ethereum.chainId) {
@@ -357,6 +386,8 @@ class ChainWeb3 {
       this.connectOnto();
     } else if (to === 'u') {
       this.connectUnstoppable();
+    } else if (to == 'bitget') {
+      this.connectBitget();
     } else if (to === 'okx') {
       this.connectOKX();
     } else if (to === 'particle') {
@@ -413,6 +444,12 @@ class ChainWeb3 {
       }
     } else if (to === 'u') {
       this.connectUnstoppable();
+      if (!this.chainInstalled) {
+        console.log('No Provider!');
+        return Promise.reject('No Provider!');
+      }
+    } else if (to === 'bitget') {
+      this.connectBitget();
       if (!this.chainInstalled) {
         console.log('No Provider!');
         return Promise.reject('No Provider!');
@@ -739,23 +776,27 @@ class ChainWeb3 {
     return await this.web3.eth.sign(wmsg, this.getSelectedAddress());
   }
 
-  async ethCommonSignTypedData(str) { // str: string
+  async ethCommonSignTypedData(str) {
+    // str: string
     let owner = this.getSelectedAddress();
-    try{
+    try {
       const signature = await this.web3.eth.personal.sign(str, owner);
       return signature;
-    }catch(e){
-      throw new Error(e?.reason ?? e?.message ?? "signature error")
+    } catch (e) {
+      throw new Error(e?.reason ?? e?.message ?? 'signature error');
     }
   }
 
-
-  async ethSignTypedData(value) { // value: [{type: "string", name: "message", value: "1231231231"}]
+  async ethSignTypedData(value) {
+    // value: [{type: "string", name: "message", value: "1231231231"}]
     let owner = this.getSelectedAddress();
     return new Promise(async (resolve, reject) => {
       var params, method;
       if (this.getSession('chainClient') === 'particle') {
-        const signature = await this.web3.eth.personal.sign(value[0].value, owner);
+        const signature = await this.web3.eth.personal.sign(
+          value[0].value,
+          owner
+        );
         resolve(signature);
       } else {
         if (this.getSession('chainClient') === 'b') {
