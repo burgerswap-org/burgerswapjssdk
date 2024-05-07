@@ -4,11 +4,11 @@ async function main() {
     const spaceId = new SpaceId();
 
     // ResolveName
-    let account = '0xde6867baef8d7079e787daf3422710c56945cc30'
+    let account = '0xee06b1d6c7cacd7b509d72cdd77c64e6a8bf0071'
     let name = await spaceId.resolveName(account, ['burger']);
     console.log(name)
 
-    account = '0x1b5ea3b86c2d0526ef17b658ec1571e8e710f6ee'
+    account = '0xee06b1d6c7cacd7b509d72cdd77c64e6a8bf0071'
     name = await spaceId.resolveName(account, ['bnb']);
     console.log(name)
 }
