@@ -101,7 +101,7 @@ const ContractsAddr = {
     Props721: '0xa728ae79bAe825385B19d5ef444be96a98aEB840',
     RewardAgent: "0x3417aB7224382D42a470Ef1Cf551239eF4e5b375",
     BurgerDiamond: "0xf31c35E4080e4bF9E06356B56B7c5b76e0e2887a",
-    ActivityClaim: "0xF5B9815Edd180352181cb03d5C605457eE93e84A"
+    ActivityClaim: "0xc2f6Dd7522662e4c16C0873F9A893AF940B3fd3b"
   },
 };
 
